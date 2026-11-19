@@ -280,7 +280,7 @@ ColorMapObject *GifUnionColorMap(
 <para>Create the union of two given color maps and return it.  If the result
 won't fit into 256 colors, NULL is returned, the allocated union
 otherwise.  ColorIn1 is copied as it to ColorUnion, while colors from
-ColorIn2 are copied iff they didn't exist before.  ColorTransIn2 maps
+ColorIn2 are copied if they didn't exist before.  ColorTransIn2 maps
 the old ColorIn2 into ColorUnion color map table.</para>
 
 <programlisting id="GifAttachImage">
@@ -340,9 +340,10 @@ Return NULL if the argument is not a valid error code.</para>
 </sect1>
 <sect1><title>The GIF Utility Font</title>
 
-<para>The 8x8 utility font used in gifecho and gifcolor lives in the library
-module gif_font.c, in a table called GifAsciiTable.  The library header file
-includes suitable externs and defines.</para>
+<para>The 8x8 utility font used in the (obsolete, no longer installed)
+gifecho and gifcolor lives in the library module gif_font.c, in a
+table called GifAsciiTable.  The library header file includes suitable
+externs and defines.</para>
 
 <para>The GIF utility font support includes entry points for drawing legends
 on in-core images, drawing boxes and rectangles, and boxing text.
